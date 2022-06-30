@@ -5,7 +5,7 @@ spring:
 # will it starts with random port
 server:  port: 0
 
-eureka:  client:    service-url:      defaultZone: http://admin:admin@localhost:8761/eureka  instance:    instance-id: ${spring.application.name}:${spring.application.instant_id:${random.value}}
+eureka:  client:    service-url:      defaultZone: http://admin:admin@${EUREKA_SERVER}:${EUREKA_SERVER_PORT}/eureka  instance:    instance-id: ${spring.application.name}:${spring.application.instant_id:${random.value}}
 
 management:
   endpoints:
