@@ -1,17 +1,19 @@
-package com.vastag.mscartoes;
+package com.vastag.msavaliadorcredito;
 
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
+@EnableRabbit
+@EnableFeignClients
 @EnableEurekaClient
 @SpringBootApplication
-@EnableRabbit
-public class MsCartoesApplication {
+public class MsAvaliadorCreditoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsCartoesApplication.class, args);
+		SpringApplication.run(MsAvaliadorCreditoApplication.class, args);
 	}
 
 }
